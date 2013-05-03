@@ -1,0 +1,92 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf370
+{\fonttbl\f0\fswiss\fcharset0 LucidaSansUnicode;\f1\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue233;\red29\green76\blue153;\red202\green227\blue255;
+}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sa240
+{\field{\*\fldinst{HYPERLINK "http://www.sublimetext.com/docs/2/index.html"}}{\fldrslt 
+\f0\fs24 \cf2 \ul \ulc2 Contents}}
+\f0\fs24 \
+\pard\pardeftab720\sa320
+
+\fs48 \cf3 OS X Command Line\
+\pard\pardeftab720\sa320
+
+\fs32 \cf3 Overview\
+\pard\pardeftab720\sa240
+
+\fs24 \cf0 Sublime Text 2 includes a command line tool, 
+\f1 subl
+\f0 , to work with files on the command line. This can be used to open files and projects in Sublime Text 2, as well working as an 
+\f1 EDITOR
+\f0  for unix tools, such as git and subversion.\
+\pard\pardeftab720\sa360
+
+\fs38 \cf3 Setup\
+\pard\pardeftab720\sa240
+
+\fs24 \cf0 The first task is to make a symlink to 
+\f1 subl
+\f0 . Assuming you've placed Sublime Text 2 in the Applications folder, and that you have a 
+\f1 ~/bin
+\f0  directory in your path, you can run:\
+\pard\pardeftab720
+
+\f1 \cf0 \cb4 ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/subl\
+\pard\pardeftab720\sa360
+
+\f0\fs38 \cf3 \cb1 Usage\
+\pard\pardeftab720
+
+\fs24 \cf0 Run 
+\f1 subl --help
+\f0 ,
+\f1 \cb4 \
+Usage: subl [arguments] [files]         edit the given files\
+   or: subl [arguments] [directories]   open the given directories\
+   or: subl [arguments] -               edit stdin\
+\
+Arguments:\
+  --project <project>: Load the given project\
+  --command <command>: Run the given command\
+  -n or --new-window:  Open a new window\
+  -a or --add:         Add folders to the current window\
+  -w or --wait:        Wait for the files to be closed before returning\
+  -b or --background:  Don't activate the application\
+  -s or --stay:        Keep the application activated after closing the file\
+  -h or --help:        Show help (this message) and exit\
+  -v or --version:     Show version and exit\
+\
+--wait is implied if reading from stdin. Use --stay to not switch back\
+to the terminal when a file is closed (only relevant if waiting for a file).\
+\
+Filenames may be given a :line or :line:column suffix to open at a specific\
+location.\
+\pard\pardeftab720\sa360
+
+\f0\fs38 \cf3 \cb1 EDITOR\
+\pard\pardeftab720\sa240
+
+\fs24 \cf0 To use Sublime Text 2 as the editor for many commands that prompt for input, set your 
+\f1 EDITOR
+\f0  environment variable:\
+\pard\pardeftab720
+
+\f1 \cf0 \cb4 export EDITOR='subl -w'\
+\pard\pardeftab720\sa240
+
+\f0 \cf0 \cb1 Specifying -w will cause the 
+\f1 subl
+\f0  command to not exit until the file is closed.\
+\pard\pardeftab720\sa360
+
+\fs38 \cf3 MacPorts\
+\pard\pardeftab720\sa240
+
+\fs24 \cf0 If you have the MacPorts version of Python installed, then starting Sublime Text 2 via the 
+\f1 subl
+\f0  will not work correctly. As a workaround, start Sublime Text 2 first via Finder, and then interact with it using 
+\f1 subl
+\f0 .\
+}
